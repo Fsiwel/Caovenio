@@ -86,10 +86,10 @@ header
 .acesso button
 {
     border:none; 
-    background-color: #FAF7A9;
+    background-color: #259CF2;
     height: 30px;
     width: 70px;
-    border-radius: 60%;
+    border-radius: 16px;
       
 }
 
@@ -101,71 +101,49 @@ header
        
 }
 
+#carrossel img {
+    margin-top: 25%;
+    height: 20vw;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 4px 2px rgb(100,100,100);
+    margin-left: 190%;
+  }
+  
+  #carrossel {
+    align-items: center;
+    justify-content: center; 
+    width: 20%;
+    left: 0%;
+    margin: 0%;
+  }
+  
+  .ante, .prox {
+    font-weight: bold;
+    font-size: 4vw;
+    text-align: center;
+    display: inline;
+    width: 5%;
+    color: rgb(50,50,50);
+    background-color: rgba(100,100,100,0.7);
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .ante:hover, .prox:hover {
+    background-color: rgba(40,40,40,0.7);
+    color: rgb(200,200,200);
+    cursor: pointer;
+  }
+  .prox 
+  {
+      margin-left: 55%;
+  }
+  .ante
+  {
+      margin-left: 35%;
+  }
 
-
-
-/*#carrossel img
-{
-height:20vw; /* essa medida em "vw" faz com a imagem ajuste a altura  
-              conforme a medida da tela - responsivo */
-/*margin-left: 10%;
-width:80%;
-border-radius:5px;
-box-shadow:2px 4px 2px rgb(100,100,100);
-}
-
-#carrossel
-{
-height:auto;
-width:100%;
-left:0%;
-
-margin:0%;
-}
-
-.ante
-{
-    height:50px;
-    
-  left:10%;
-  margin-top:18%;
-  top:10vw; /* essa medida em "vw" faz com que a seta se adapte à 
-                 altura do quadro em diferentes medidas - responsivo */
-/*                 
-}
-
-.prox
-{
-  left:85%;
-  top:10vw; /* essa medida em "vw" faz com que a seta se adapte à 
-                 altura do quadro em diferentes medidas - responsivo */
-                 /*
-}
-
-.ante, .prox
-{
-  font-weight:bold;
-  font-size:4vw;
-  text-align:center;
-  display:in-line;
-  width:15%;
-  color:rgb(50,50,50);
-  background-color:rgba(100,100,100,0.7);
-  border-radius:50%;
-  position:absolute;
-}
-
-.ante:hover, .prox:hover
-{
-  background-color:rgba(40,40,40,0.7);
-  color:rgb(200,200,200);
-  cursor:pointer;
-}
-
-/* se aumentar a quantidade de imagens é só aumentar a quantidade de 
-   variáveis img1, img2, img3, img4... (cada uma delas com a sua 
-   respectiva imagem atribuída e mudar também o valor do "contador"
-   nas estruturas "if" das funções do JavaScript). */ 
 
 .container
 {
@@ -206,15 +184,27 @@ margin:0%;
 
 }
 
-h1:hover
-{
-    background-color: #259df263 ;
-    height: 75px;
-    width: 73px;
-    
 
+#planos-btn 
+{
+    margin-left:49%;
+    margin-top: 3%;
+    text-decoration: none;
+    border:solid;
+    border-color: #065A96;
+    border-radius: 16px;
+    background-color:#259CF2;
+    font-size: 25px;
+    cursor:pointer;
+    width: 8%;
+    text-transform: uppercase;
 }
 
+#planos-btn:hover 
+{
+    transform: scale(2.2);
+  
+}
 p{
 
 
