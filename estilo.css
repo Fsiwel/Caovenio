@@ -87,8 +87,8 @@ header
 {
     border:none; 
     background-color: #259CF2;
-    height: 30px;
-    width: 70px;
+    height: 4vh;
+    width: 7vh;
     border-radius: 16px;
       
 }
@@ -192,17 +192,17 @@ header
     text-decoration: none;
     border:solid;
     border-color: #065A96;
-    border-radius: 16px;
+    border-radius: 16%;
     background-color:#259CF2;
     font-size: 25px;
     cursor:pointer;
-    width: 8%;
+    width: 13vh;
     text-transform: uppercase;
 }
 
 #planos-btn:hover 
 {
-    transform: scale(2.2);
+    transform: scale(1.1);
   
 }
 p{
@@ -216,4 +216,49 @@ p{
     
 }
 
+@media only screen and (max-width: 768px) {
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+    
+
+    .navegar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu, .acesso {
+        padding: 1rem;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .acesso button {
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .carrossel 
+    {
+        align-items: cen;
+    }
+    
+}
 
