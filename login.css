@@ -72,3 +72,24 @@ legend {
 fieldset {
     border: 3px solid dodgerblue;
 }
+
+@media (max-width: 768px) {
+    .tela-login {
+        padding: 10px;
+    }
+
+    .logar, .senha {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    legend {
+        padding: 8px;
+        font-size: 20px;
+    }
+}

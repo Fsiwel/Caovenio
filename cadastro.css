@@ -1,29 +1,37 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    height: auto;    
+    margin: 0px;
+    padding: 0px;
+    font-size: 1vw;
     background-image: linear-gradient(to right, rgb(43, 108, 240), rgb(11, 55, 143));
-    
-    
 }
 
-body .box {
-    position: absolute;
-    top: 60%;
+ .box {
+    width: 40%;
+    margin-top:5% auto;
+   /* top: 60%;
+    margin-left:50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 15px;
+    padding: 1.5vw;
     border-radius: 15px;
-    width: 60%;
-    display:relative;
-  
-    color: white
+    color: white;
+    /*height:auto;*/
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
 }
 
 fieldset {
-    border: 3px solid #1e90ff;
+    border: 0.3vw solid #1e90ff;
     height: 100%;
     display: inline-flex;
-    width: 95%;
+   justify-content: center;
+    width: 80%;
+    margin-left:5% ;
+    padding: 5%;
     
   
 }
@@ -43,11 +51,7 @@ legend {
 
 }
 
-.info
-{
-    margin-left: 40%;
-    margin-top: -1%;
-}
+
 
 .inputUser {
     background: none;
@@ -77,7 +81,11 @@ legend {
     font-size: 12px;
     color: dodgerblue;
 }
-
+.inputBox
+{
+    align-items: center;
+    justify-content: center;
+}
 .cartao 
 {  
     height:230px;
@@ -91,35 +99,30 @@ legend {
     
 }
 
-
-
 .cartao-frente, .cartao-tras
 {
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden;
 }
 
-
-.cartao-tras
+.visivel
 {
-    transform: rotateY(180deg);
+    visibility:visible;
+}
+
+.invisivel
+{
+    visibility:hidden;
+
 }
 
 .virar {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
 }
 
 
-.faixa
-{
-    background-color: black;
-    width: 100%;
-    height: 10%;
-    position: absolute;
-    bottom: 0;
-} 
+
 
 .info-cartao
  {
@@ -170,6 +173,26 @@ img
     width: 55PX;
     text-align: center;
 }
+
+.faixa
+{
+    background-color: black;
+    width: 100%;
+    height: 10%;
+    position: relative;
+    bottom: 0;
+    margin-top: 3%;
+} 
+
+#cvv 
+{
+    position:absolute;
+    margin-top: 50%;
+    margin-left: 5%;
+    width: 15%;
+}
+
+
 #data_nascimento {
     border: none;
     padding: 8px;
@@ -184,16 +207,14 @@ img
     border: none;
     border-bottom: 1px solid white;
     outline: none;
-    color: white;
+    color: black;
     font-size: 17px;
     width: 65%;
     text-align: left;
+    padding: 5px;
 } 
 
 
-select option {
-    background-color: rgb(10, 31, 74);
-}
 
 .rga 
 {
@@ -226,3 +247,85 @@ select option {
 #enviar:hover {
     background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
 }
+
+
+@media only screen and (max-width: 700px) {
+    
+    .box 
+    {
+
+   
+    display: flex;
+    flex-direction: column; /* Para empilhar os elementos verticalmente em telas menores */
+    /* ... outras propriedades ... */
+    width: 95%;
+    margin: 5% auto;
+    
+    }
+ 
+
+    .inputUser, select  
+    {
+        font-size: 15px;;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .chip, .bandeira, .sinal {
+        height: 15px;
+        
+       
+    }
+    
+    .chip, .sinal 
+    {
+        margin-top: -8%;
+    }
+
+    .sinal
+    {
+        margin-left: 30% ;
+        margin-top: -8%;
+        
+    }
+
+    .bandeira
+    {
+        margin-top: 10%;
+    }
+
+    input, select {
+        font-size: 2em;
+        /* ... outras propriedades ... */
+        width: 15vw;
+    flex-direction: column;
+    }
+    .inputBox {
+        width: 100%; /* Para garantir que os inputs ocupem toda a largura */
+    }
+
+    .info {
+        margin-left: 0; /* Ajustei a margem para 0 */
+        text-align: center; /* Centralizei o texto */
+    }
+
+
+    .cartao
+    {   
+         width: 45vw;
+        height: 32vw;
+        padding: 1%;
+    }
+
+    #enviar
+    {
+        text-align: center;
+    }
+
+    
+}
+
+

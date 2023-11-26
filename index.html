@@ -1,94 +1,330 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caovenio</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css" />
 </head>
 
 <body>
     <header>
-        <nav class="navegar">      
-             
-            <img class="logo"  src="logo-caovenio.png" alt="logo" /> 
-            
+        <nav class="navegar">
+
+            <img class="logo" src="caovenio-logo.png" alt="logo" />
+
             <div class="menu">
                 <ul>
-                    <li class="nav-item"> <a class="nav-link" href="#"> Home </a> </li >
-                    <li class="nav-item"><a class="nav-link" href="#"> Planos</a></li> 
-                    <li class="nav-item"> <a class="nav-link" href="#"> Quem Somos </a></li >
-                    <li class="nav-item"> <a class="nav-link" href="# "> Trabalhe conosco</a> </li> 
-                    <li class="nav-item"> <a class="nav-link" href="#"> Redes Sociais</a></li> 
+                    <li class="nav-item"> <a class="nav-link" href="#"> Home </a> </li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Planos</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Quem Somos </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="# "> Trabalhe conosco</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Redes Sociais</a></li>
                 </ul>
             </div>
 
-            <div class="acesso" >
-                <button id="login" ><a href="login.html">  </a> Login </button>
+            <div class="menu">
+                <a class="acesso" href="login.html"> Login </a>
             </div>
         </nav>
     </header>
 
 
-    
-   <div id="carrossel">
-        <img src="planos/Plano1.jpg" name="slide" id="slide"/>
-        
-      </div>
-      <button class="ante" onclick="Anterior()">&#60;</button>
-      <button class="prox" onclick="Proximo()">&#62;</button>
-
-    
-<div>
-
-<div class = container>
-    <section class="equipe">
-            <h1>Planos </h1>
-            <img class="quem_somos" src="img/planos.png" alt="">
-            <p class="descricao">Cada um de nossos planos foi pensado com todo carinho e visando cuidar quem você mais ama, cobrindo desde vacinações, cirurgias, visistas mensais e até mesmo SPA e todo cuidado 
-                para seu bichinho querido, e trazer o máximo conforto que somente a Caovaovenio pode oferecer, não perca tempo se pensando em como cuidar do seu bichinho de estimação 
-                clique no botão e conheça nossos planos. 
-            </p>   
-            <button id="planos-btn"><ahref="#"> </a>  Planos </button>  
-    </section>  
-</div>
     <div class="container">
-    <section class="equipe"> 
-        <h1 class="sobre">Quem Somos </h1>
-        <img class="quem_somos" src="img/sobre_nos.png" alt="">
-        <p class="descricao">A caovenio é uma rede de convenio pet buscando trazer seguraça e cuidado para quem você ama, nossos associados estão localizados em todo Brasil e se espandindo cada vez mais, tendo o objetivo de proteger e cuidar de seu melhor amigo 24 horas por dia trazendo saude e conforto com planos que cobrem desde toda a vacinação do pet até SPA e uma creche bem relaxante para quem você mais ama. Procuramos facilitar e ajudar nos cuidados com seu melhor amigo, criada por pessoas apaixonadas por pets que buscam o bem estar do seu amigão, sendo assim procuramos beneficiar a todos independente de suas condições.
-            Entendemos que cuidar do seu melhor amigo é uma honra, tendo o melhor que se pode oferecer no mercado de pets para ele, fazendo o possivel e o impossivel para que seu pet se sinta muito bem, tendo nossa dedicação a todo momento para que esteja tudo a altura do que ele merece.
-            convidamos você a visitar nosso site para ficar por dentro de tudo que temos a oferecer, nao fique de fora e faça parte da familia cãovenio.</p>
+        <div class="fundo-carrossel">
+            <div id="carrossel">
+                <img src="insta/cuidados.png" name="slide" id="slide" />
+            </div>
+
+            <button class="ante" onclick="Anterior() ">&#60; </button>
+            <button class="prox" onclick="Proximo()">&#62;</button>
+
+
+        </div>
     </div>
+
+
+
+    <div id=equipe>
+        <div class="cards-container">
+            <div class="container-plano1"></div>
+            <div class="container">
+                <!-- Card 1 -->
+                <div class="card card-1" onmouseover="addHoverClass(this)" onmouseout="removeHoverClass(this)">
+                    <!-- card-header -->
+                    <div class="card-header">
+                        <img src="planos/plano1.jpeg" class="card-img" />
+                    </div>
+                    <!-- card-header -->
+
+                    <!-- card-body -->
+                    <div class="card-body">
+                        <h3 class="card-local">Basicão</h3>
+                        <h2 class="card-titulo">Sobre o Plano: </h2>
+                        <p class="card-texto">
+                            O Plano basicão é a nossa porta de entrada no carinho que somente a caovenio possui este
+                            Plano
+                            cobre todas as vacinas necessárias para seu pet, contendo uma consulta mensal em qualquer
+                            consultório associado
+                            e possui desconto em cirurgias em toda nossa rede em todo Brasil.
+                            O plano cobre pets como gato, hamsters,passaros e cachorros, venha cuidar do seu pet com
+                            quem ama o que faz
+                            Assine o Basicão por apenas R$ 40 mensais
+
+                        </p>
+                    </div>
+                    <!-- card-body -->
+
+                    <!-- card-footer -->
+                    <div class="saiba-mais">
+                        <a href="#">Ver Mais</a>
+
+                    </div>
+                    <div class="cadastro">
+                        <a class="cadastro-btn hidden" id="basicao" href="formulário.html"> Assinar Basicão</a>
+                    </div>
+                    <!-- card-footer -->
+                </div>
+                <!-- Card 1 -->
+
+                <!-- Card 2 -->
+                <div class="card card-2" onmouseover="addHoverClass(this)" onmouseout="removeHoverClass(this)">
+                    <!-- card-header -->
+                    <div class="card-header">
+                        <img src="planos/plano2.png" class="card-img" />
+                    </div>
+                    <!-- card-header -->
+
+                    <!-- card-body -->
+                    <div class="card-body">
+                        <h3 class="card-local">Medicão</h3>
+                        <h2 class="card-titulo">Sobre o Plano:</h2>
+                        <p class="card-texto">
+                            O plano medicão foi pensando em quem quer um cuidado maior para seu pet, cobrindo todas as
+                            vacinas com nossos associados, e tendo descontos em cirurgias em toda nossa rede, tendo até
+                            10 consultas mensais cobertas pelo Cãovenio em toda nossa rede de assosciados, venha cuidar
+                            do seu pet com nossos profissionais qualificados e localizados em todo brasil.
+                            O plano cobre pets como gato, hamsters,passaros e cachorros
+                            Assine o plano medicão por apenas R$ 80 mensais e venha cuidar de quem você ama!!
+                        </p>
+                        </p>
+                    </div>
+                    <!-- card-body -->
+
+                    <!-- card-footer -->
+                    <div class="saiba-mais">
+                        <a href="#">Ver Mais</a>
+                    </div>
+                    <div class="cadastro">
+                        <a class="cadastro-btn hidden" href="formulário.html"> Assinar Medicão</a>
+                    </div>
+                    <!-- card-footer -->
+                </div>
+                <!-- Card 2 -->
+
+                <!-- Card 3 -->
+                <div class="card card-3" onmouseover="addHoverClass(this)" onmouseout="removeHoverClass(this)">
+                    <!-- card-header -->
+                    <div class="card-header">
+                        <img src="planos/plano3.jpg" class="card-img" />
+                    </div>
+                    <!-- card-header -->
+
+                    <!-- card-body -->
+                    <div class="card-body">
+                        <h3 class="card-local">Cãopleto</h3>
+                        <h2 class="card-titulo">Sobre o Plano</h2>
+                        <p class="card-texto">
+                            O plano Cãopleto foi pensando em quem deseja cuidado e carinho extremo para seu pet,
+                            cobrindo todos os tipis de vacinas e cirugias pelo páis
+                            tendo consultas ilimitadas e uma visita mensal ao SPA para pets da Cãovenio, onde seu amigo
+                            pode relaxar e ter um dia totalmente relaxante com muito amor e carinho.
+
+                            O plano cobre pets como gato, hamsters,passaros e cachorrosAssine o plano Cãopleto por
+                            apenas R$ 150 mensais
+                        </p>
+                    </div>
+                    <!-- card-body -->
+
+                    <!-- card-footer -->
+                    <div class="saiba-mais">
+                        <a href="#">Ver Mais</a>
+                    </div>
+                    <div class="cadastro">
+                        <a class="cadastro-btn hidden" href="formulário.html"> Assinar Cãopleto</a>
+                    </div>
+                    <!-- card-footer -->
+                </div>
+                <!-- Card 3 -->
+
+                <!-- Card 4 -->
+                <div class="card card-4" onmouseover="addHoverClass(this)" onmouseout="removeHoverClass(this)">
+                    <!-- card-header -->
+                    <div class="card-header">
+                        <img src="planos/plano4.png" class="card-img" />
+                    </div>
+                    <!-- card-header -->
+
+                    <!-- card-body -->
+                    <div class="card-body">
+                        <h3 class="card-local">Exoticão</h3>
+                        <h2 class="card-titulo">Sobre o Plano</h2>
+                        <p class="card-texto">
+                            É um plano pensando em quem tem um gosto diferenciado para pets,
+                            visando cuidar de todo tipo de pet, e trazer o conforto que seu amigo precisa,
+                            com o plano extoticão você pode assinar o cãovenio para qualquer animal
+                            daremos todo o cuidado que só a Cãovenio tem
+                            cobrindo todos os planos anteriores, vacinas, consultas ilimitadas e visita mensal ao SPA
+                            Cãovenio, onde o pet
+                            terá um dia totalmente relaxante com muito amor e carinho.
+                            por
+                            apenas R$ 200 Mensais
+                        </p>
+                    </div>
+                    <!-- card-body -->
+
+                    <!-- card-footer -->
+                    <div class="saiba-mais">
+                        <a href="#">Ver Mais</a>
+                    </div>
+                    <div class="cadastro">
+                        <a class="cadastro-btn hidden" href="formulário.html"> Assinar Exoticão</a>
+                    </div>
+                    <!-- card-footer -->
+                </div>
+                <!-- Card 3 -->
+
+            </div>
+            </section>
+        </div>
+        <div class="equipe-container">
+            <section id="trabalhe-conosco" class="equipe">
+                <h1 class="sobre text-center">Quem Somos </h1>
+                <img class="p2" src="trabalhe-conosco.jpg" alt="">
+                <p class="descricao">A caovenio é uma rede de convenio pet buscando trazer seguraça e cuidado para quem
+                    você ama, nossos associados estão localizados em todo Brasil e se espandindo cada vez mais, tendo o
+                    objetivo de proteger e cuidar de seu melhor amigo 24 horas por dia trazendo saude e conforto com
+                    planos que cobrem desde toda a vacinação do pet até SPA e uma creche bem relaxante para
+                    quem você mais ama. Procuramos facilitar e ajudar nos cuidados com seu melhor amigo, criada por
+                    pessoas apaixonadas por pets que buscam o bem estar do seu amigão, sendo assim procuramos beneficiar
+                    a todos independente de suas condições.
+                    Entendemos que cuidar do seu melhor amigo é uma honra, tendo o melhor que se pode oferecer no
+                    mercado de pets para ele, fazendo o possivel e o impossivel para que seu pet se sinta muito bem,
+                    tendo nossa dedicação a todo momento para que esteja tudo a altura do que ele merece.
+                    convidamos você a visitar nosso site para ficar por dentro de tudo que temos a oferecer, nao fique
+                    de fora e faça parte da familia cãovenio.
+                </p>
+            </section>
+        </div>
         </section>
-<div class="container"> 
-    <section class="equipe">
-        <h1 class="sobre"> Trabalhe conosco  </h1>
-        <img class="quem_somos" src="img/trabalhe_conosco.png" alt="">
-        <div class="descricao">
-        <p> 
-            Inscreva-se no nosso programa de associados, a caovenio tem excelentes planos para seu petshop independente da especialização. 
-            atendendo em todo Brasil em parceria com nossos associdados buscando trazer saude e conforto para o pet de nossos clientes, assim criando 
-            uma relação de confiaça entre nosso cliente final e associados, increva-se já em nossa sessão de cadastro e instale nossa aplicação. 
-        </p>
-    </div>
-</div>
-    </section>
+        <div class="equipe-container">
+            <section class="equipe">
+                <h1 class="sobre sobre text-center"> Trabalhe conosco </h1>
+                <img class="p2" src="img/trabalho.png" alt="">
 
+
+                <p class="descricao">
+                    Inscreva-se no nosso programa de associados, a caovenio tem excelentes planos para seu petshop
+                    independente da especialização.
+                    atendendo em todo Brasil em parceria com nossos associdados buscando trazer saude e conforto para o
+                    pet de nossos clientes, assim criando
+                    uma relação de confiaça entre nosso cliente final e associados, increva-se já em nossa sessão de
+                    cadastro e instale nossa aplicação.
+                </p>
+
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Caovenio. Todos os direitos reservados.</p>
+            <p> Nossas redes Sociais: </p>
+            <a href="https://www.facebook.com/profile.php?id=61553946501812">
+                <img class="fb" src="img/facebook_icon.png" alt=""> </a>
+            <a href="https://instagram.com/cao.venio?igshid=MTNiYzNiMzkwZA==">
+                <img class="insta" src="img/instagram_icon.png" alt=""> </a>
+            <a href="https://wa.me/+5511984237905" target="_blank">
+                <img class="wpp" src="img/whatsapp_icon.png" alt=""> </a>
+        </footer>
+        </section>
+
+        <script language="JavaScript">
+            var contador = 0;
+            var imagens = ["insta/cuidados.png", "insta/plano.png" ,"insta/trabalhe-conosco.png"];
+            const cardBody = document.querySelector('.card-body');
+            const cadastroBtn = document.querySelector('.cadastro-btn');
+
+            function atualizarImagem() {
+                document.images["slide"].src = imagens[contador];
+            }
+
+            function Anterior() {
+                contador = (contador === 0) ? imagens.length - 1 : contador - 1;
+                atualizarImagem();
+            }
+
+            function Proximo() {
+                contador = (contador === imagens.length - 1) ? 0 : contador + 1;
+            
+                atualizarImagem();
+              
     
-</div>
-   
+            }
 
+  
 
-    <footer>    </footer>
-</div>
- 
+            window.onload = function () {
+                var img = document.getElementById("slide");
+                img.addEventListener("click", function () {
+                    var link;
+                    if (contador === 0) {
+                        link = "https://www.instagram.com/p/C0Ae1DUMCZH/?img_index=1";
+                    } else if (contador === 1) {
+                        link = "https://www.instagram.com/p/C0AhbbcsYtO/";
+                    }
 
+                    else if (contador === 2) {
+                        link = "#trabalhe-conosco";
+                        
+                      
+        }
+                    window.location.href = '#trabalhe-conosco';
+
+                    
+                });
+
+               
     
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            atualizarImagem();
+                        }
+                    });
+                }, { threshold: 0.5 });
 
-        
-  
-<script href="script.js"></script>
-  
+                observer.observe(img);
+            };
+
+            function addHoverClass(card) {
+                card.classList.add('hovered');
+            }
+
+            function removeHoverClass(card) {
+                card.classList.remove('hovered');
+            }
+
+            //botão de cadastro do card 
+            cardBody.addEventListener('mouseenter', () => {
+                cadastroBtn.classList.remove('hidden');
+            });
+
+            cardBody.addEventListener('mouseleave', () => {
+                cadastroBtn.classList.add('hidden');
+            });
+        </script>
+
 </body>
+
 </html>
