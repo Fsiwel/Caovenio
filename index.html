@@ -18,14 +18,14 @@
             <div class="menu">
                 <ul>
                     <li class="nav-item"> <a class="nav-link" href="#"> Home </a> </li>
-                    <li class="nav-item"><a class="nav-link" href="#"> Planos</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#"> Quem Somos </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="# "> Trabalhe conosco</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#"> Redes Sociais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planos"> Planos</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#quem-somos"> Quem Somos </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#trabalhe-conosco "> Trabalhe conosco</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#rede-social"> Redes Sociais</a></li>
                 </ul>
             </div>
 
-            <div class="menu">
+            <div class="login">
                 <a class="acesso" href="login.html"> Login </a>
             </div>
         </nav>
@@ -48,7 +48,7 @@
 
 
     <div id=equipe>
-        <div class="cards-container">
+        <div id="planos" class="cards-container">
             <div class="container-plano1"></div>
             <div class="container">
                 <!-- Card 1 -->
@@ -199,16 +199,16 @@
             </div>
             </section>
         </div>
-        <div class="equipe-container">
-            <section id="trabalhe-conosco" class="equipe">
-                <h1 class="sobre text-center">Quem Somos </h1>
+        <div  class="equipe-container">
+            <section  class="equipe">
+                <h1 id="quem-somos" class="sobre text-center">Quem Somos </h1>
                 <img class="p2" src="trabalhe-conosco.jpg" alt="">
                 <p class="descricao">A caovenio é uma rede de convenio pet buscando trazer seguraça e cuidado para quem
                     você ama, nossos associados estão localizados em todo Brasil e se espandindo cada vez mais, tendo o
                     objetivo de proteger e cuidar de seu melhor amigo 24 horas por dia trazendo saude e conforto com
                     planos que cobrem desde toda a vacinação do pet até SPA e uma creche bem relaxante para
-                    quem você mais ama. Procuramos facilitar e ajudar nos cuidados com seu melhor amigo, criada por
-                    pessoas apaixonadas por pets que buscam o bem estar do seu amigão, sendo assim procuramos beneficiar
+                    quem você mais ama. Procuramos facilitar e ajudar nos cuidados com seu melhor amigo, criada por
+                    pessoas apaixonadas por pets que buscam o bem estar do seu amigão, sendo assim procuramos beneficiar
                     a todos independente de suas condições.
                     Entendemos que cuidar do seu melhor amigo é uma honra, tendo o melhor que se pode oferecer no
                     mercado de pets para ele, fazendo o possivel e o impossivel para que seu pet se sinta muito bem,
@@ -219,8 +219,8 @@
             </section>
         </div>
         </section>
-        <div class="equipe-container">
-            <section class="equipe">
+        <div  class="equipe-container">
+            <section id="trabalhe-conosco" class="equipe">
                 <h1 class="sobre sobre text-center"> Trabalhe conosco </h1>
                 <img class="p2" src="img/trabalho.png" alt="">
 
@@ -236,8 +236,8 @@
 
             </section>
         </div>
-
-        <footer>
+        <br><br>
+        <footer id="rede-social">
             <p>&copy; 2023 Caovenio. Todos os direitos reservados.</p>
             <p> Nossas redes Sociais: </p>
             <a href="https://www.facebook.com/profile.php?id=61553946501812">
@@ -247,6 +247,7 @@
             <a href="https://wa.me/+5511984237905" target="_blank">
                 <img class="wpp" src="img/whatsapp_icon.png" alt=""> </a>
         </footer>
+   
         </section>
 
         <script language="JavaScript">
@@ -272,7 +273,7 @@
     
             }
 
-  
+            
 
             window.onload = function () {
                 var img = document.getElementById("slide");
@@ -286,14 +287,16 @@
 
                     else if (contador === 2) {
                         link = "#trabalhe-conosco";
-                        
-                      
-        }
-                    window.location.href = '#trabalhe-conosco';
-
-                    
-                });
-
+                    // Redireciona para a seção "Trabalhe Conosco" com suavização
+                     document.querySelector(link).scrollIntoView({
+                     behavior: 'smooth',
+                     block: 'start'
+                    });
+                    return; // Não redireciona para o link do Instagram se for a terceira imagem
+                }
+        window.location.href = link;
+    });
+      
                
     
                 var observer = new IntersectionObserver(function (entries) {

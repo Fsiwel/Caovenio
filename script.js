@@ -33,11 +33,31 @@ let mostrar = setInterval(Exibindo, tempo);
 // JS para o Cartão de crédito 
 var cartaoElement = document.getElementById('cartao');
 var anoInput = document.getElementById('ano-expiracao');
+var numcvv = document.getElementById('CVV');
 
-anoInput.addEventListener('input', function() {
-  if (anoInput.value.length === 4) {
-    cartaoElement.classList.add('virar');
-  } else {
+anoInput.addEventListener('input', function() 
+{
+  if (anoInput.value.length == 4) 
+  {
+    /*se a quatidade de números no campo ANO é 4 dígitos
+    troca-se o valor da "class" de "visível" para "invisível"*/ 
+    document.getElementById("cartao-frente").className = document.getElementById("cartao-frente").className.replace("cartao-frente visivel","cartao-frente invisivel");
+    document.getElementById("cartao-tras").className = document.getElementById("cartao-tras").className.replace("cartao-tras invisivel","cartao-tras visivel");
+    document.getElementById("faixa").className = document.getElementById("faixa").className.replace("faixa invisivel","faixa visivel");
+  } 
+  else 
+  {
     cartaoElement.classList.remove('virar');
   }
+
+});
+
+  numcvv.addEventListener('input', function() 
+  {
+    if (numcvv.value.length == 3)
+     {
+      /*se a quatidade de números no campo CVV é 3 dígitos
+        coloca-se o foco do cursor no campo NOME"*/ 
+      document.getElementById("nome-pet").focus();
+     }
 });

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caovenio</title>
-    <link rel="stylesheet" href="cadastro-associado.css">
+    <link rel="stylesheet" href="cadastro.css">
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                    <input type="date" name="data_nascimento" id="data_nascimento" required>
 
                  
-                   <br>
+                   <br><br>
                    <div class="inputBox">
                        <input type="text" name="CEP" id="CEP" class="inputUser" maxlength="10" required>
                        <label for="CEP" class="labelInput" >CEP</label>
@@ -63,34 +63,34 @@
                     <div>
                        <select class="estado">
                            <option value="0">UF:</option>
-                           <option value="1">Acre - AC </option>
-                           <option value="2">Alagoas - AL</option>
-                           <option value="3">Amapá - AM</option>
-                           <option value="4">Amazonas - AM</option>
-                           <option value="5">Amazonas - AM</option>
-                           <option value="6">Bahia - BA</option>
-                           <option value="7"> Ceará - CE </option>
-                           <option value="8"> Espírito Santo - ES</option>
-                           <option value="9"> Goiás - GO</option>
-                           <option value="10"> Maranhão MA</option>
-                           <option value="11"> Mato Grosso - MT </option>
-                           <option value="12"> Mato Grosso do Sul - MS</option>
-                           <option value="13"> Minas Gerais - MG</option>
-                           <option value="14"> Pará - PA</option>
-                           <option value="15"> Paraíba - PB</option>
-                           <option value="16"> Paraná - `R</option>
-                           <option value="17"> Pernambuco - PE</option>
-                           <option value="18"> Piauí - PI</option>
-                           <option value="19"> Rio de Janeiro - RJ </option>
-                           <option value="20"> Rio Grande do Norte - RN </option>
-                           <option value="21"> Rio Grande do Sul - RS</option>
-                           <option value="22"> Rondônia - RO</option>
-                           <option value="23"> Roraima - RR</option>
-                           <option value="24"> Santa Catarina - SC</option>
-                           <option value="25"> São Paulo - SP </option>
-                           <option value="26"> Sergipe - SE</option>
-                           <option value="27"> Tocantins - TO</option>
-                           <option value="28"> Distrito Federal - DF </option>
+                           <option value="1"> AC </option>
+                           <option value="2"> AL</option>
+                           <option value="3">AM</option>
+                           <option value="4"> AM</option>
+                           <option value="5"> AM</option>
+                           <option value="6">BA</option>
+                           <option value="7">  CE </option>
+                           <option value="8">  ES</option>
+                           <option value="9"> GO</option>
+                           <option value="10"> MA</option>
+                           <option value="11"> MT </option>
+                           <option value="12">  MS</option>
+                           <option value="13">  MG</option>
+                           <option value="14"> PA</option>
+                           <option value="15"> PB</option>
+                           <option value="16"> PR</option>
+                           <option value="17"> PE</option>
+                           <option value="18">  PI</option>
+                           <option value="19">  RJ </option>
+                           <option value="20"> RN </option>
+                           <option value="21">  RS</option>
+                           <option value="22"> RO</option>
+                           <option value="23">  RR</option>
+                           <option value="24">  SC</option>
+                           <option value="25">  SP </option>
+                           <option value="26"> SE</option>
+                           <option value="27">  TO</option>
+                           <option value="28"> DF </option>
 
                        </select>
                        </div>
@@ -118,7 +118,7 @@
                    </div>
                    <br>
                    <div>
-                    <select class="estado">
+                    <select class="especialidade">
                         <option value="0">Especialidade:</option>
                         <option value="1">Cirurgia Veterinária </option>
                         <option value="2">Dermatologia Veterinária</option>
@@ -149,7 +149,7 @@
                     <div class="historico">
                         <br>
                         <label class= "servicos" for="servicos">Lista de serviços oferecidos: </label>
-                        <textarea name="servico" id="servico" cols="120" rows="10"></textarea>
+                        <textarea name="historico" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
                     <div>
                         <br>
                         <input type="submit" name="enviar" id="enviar">

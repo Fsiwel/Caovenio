@@ -8,20 +8,15 @@ body {
 }
 
  .box {
-    width: 40%;
+    width: 60%;
     margin-top:5% auto;
-   /* top: 60%;
-    margin-left:50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     background-color: rgba(0, 0, 0, 0.6);
     padding: 1.5vw;
     border-radius: 15px;
     color: white;
-    /*height:auto;*/
     display: flex;
     flex-direction: column;
-    margin-left: 30%;
+    margin-left: 20%;
 }
 
 fieldset {
@@ -52,14 +47,16 @@ legend {
 }
 
 
-
+input
+{
+    font-size: 20px;
+}
 .inputUser {
     background: none;
     border: none;
     border-bottom: 1px solid white;
     color: white;
     outline: none;
-    font-size: 15px;
     width: 100%;
     letter-spacing: 2px;
 }
@@ -75,10 +72,11 @@ legend {
    
 }
 
+
 .inputUser:focus~.labelInput,
 .inputUser:valid~.labelInput {
     top: -10px;
-    font-size: 12px;
+    font-size: 15px;
     color: dodgerblue;
 }
 .inputBox
@@ -86,24 +84,88 @@ legend {
     align-items: center;
     justify-content: center;
 }
-.cartao 
-{  
-    height:230px;
-    width: 350px;
-    background-color: purple;
-    box-shadow: 10px 10px 10px black;
-    margin-left: 5%;
-    transform-style: preserve-3d;
-    transition: transform 0,6s;
-    position: relative;
-    
+/*Css form associado*/
+.foto 
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+#foto
+{
+    width: 150px;
+    font-size: 15px;
+}
+.especialidade 
+{
+    width: 150px ;
+}
+select
+{
+    width: 55px;
 }
 
-.cartao-frente, .cartao-tras
+
+.faixa
 {
+    background-color: black;
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 10%;
+} 
+
+#cvv 
+{
+    /*position:absolute;*/
+    margin-left: 5%;
+    width: 15%;
+} 
+
+.cartao
+{
+    background-color: purple;
+    height: 200px;   
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+.info-cartao 
+{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    margin-top: 10px;
+    margin: 0px 10px;
+
+}
+.validade
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+#ano-expiracao
+{
+    width: 70px;
+}
+
+.cartao-img
+{
+    margin: 0px 10px;
+}
+.chip
+{
+    width: 40px;
+}
+.bandeira
+{
+    width: 50px;
+    justify-self: right;
+    margin-left: 43%;
+}
+.sinal
+{
+    width: 30px;
 }
 
 .visivel
@@ -121,87 +183,21 @@ legend {
     transform: rotateY(360deg);
 }
 
-
-
-
-.info-cartao
- {
-    margin-left: 15px;
-    text-align: center;
-    width: 200px;
-    
-}
-img
-{
-    align-items: center;
-}
-.chip  
-{
-    height: 35px;
-   margin-top:25%;
-   margin-left: 35px ;
-   
-}
-.sinal 
-{
-    height: 18px;
-    margin-left: 25%;
-    margin-top: -60px;
-    margin-bottom: 25px;
-   
-
-}
-.bandeira 
-{
-    height: 35px;
-    margin-left: 52%;
-    margin-bottom: 12.5%;
-}
-.validade
-{
-    align-items: center;
-    display: flex;
-    padding: 10px;
-    
-}
-#mes-expiracao
-{
-    width: 60px;
-}
-#ano-expiracao
-{
-    width: 55PX;
-    text-align: center;
-}
-
-.faixa
-{
-    background-color: black;
-    width: 100%;
-    height: 10%;
-    position: relative;
-    bottom: 0;
-    margin-top: 3%;
-} 
-
-#cvv 
-{
-    position:absolute;
-    margin-top: 50%;
-    margin-left: 5%;
-    width: 15%;
-}
-
-
 #data_nascimento {
     border: none;
-    padding: 8px;
+    min-width: 115px;
+    max-height: 23px;
     border-radius: 10px;
     outline: none;
-    font-size: 15px;
+    font-size: 13px;
     margin-left: 25px;
 }
-
+.genero 
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
 .estado {
     background-color: transparent;
     border: none;
@@ -209,7 +205,7 @@ img
     outline: none;
     color: black;
     font-size: 17px;
-    width: 65%;
+    width: 35%;
     text-align: left;
     padding: 5px;
 } 
@@ -274,28 +270,35 @@ img
         height: auto;
     }
 
-    .chip, .bandeira, .sinal {
-        height: 15px;
-        
-       
+    .cartao {
+        width: 60vw; /* Ajuste para o tamanho desejado em dispositivos responsivos */
+        height: auto; /* Ajuste para o tamanho desejado em dispositivos responsivos */
+        max-height: 45vh; /* Limita a altura máxima em dispositivos responsivos */
+        padding: 1%;
     }
+
+
+    .info-cartao {
+        width: 100%;
+    }
+
+    .chip, .sinal, .bandeira {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .validade {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mes-expiracao, #ano-expiracao, #cvv {
+        width: 100%;
+        margin-top: 5px;
+    }
+
     
-    .chip, .sinal 
-    {
-        margin-top: -8%;
-    }
 
-    .sinal
-    {
-        margin-left: 30% ;
-        margin-top: -8%;
-        
-    }
-
-    .bandeira
-    {
-        margin-top: 10%;
-    }
 
     input, select {
         font-size: 2em;
@@ -329,3 +332,109 @@ img
 }
 
 
+@media only screen and (max-width: 500px) {
+    
+    .box 
+    {
+
+   
+    display: flex;
+    flex-direction: column; /* Para empilhar os elementos verticalmente em telas menores */
+    /* ... outras propriedades ... */
+    width: 95%;
+    margin: 5% auto;
+    
+    }
+ 
+
+    .inputUser, select  
+    {
+        font-size: 15px;;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .cartao {
+        width: 60vw; /* Ajuste para o tamanho desejado em dispositivos responsivos */
+        height: auto; /* Ajuste para o tamanho desejado em dispositivos responsivos */
+        max-height: 45vh; /* Limita a altura máxima em dispositivos responsivos */
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .info-cartao {
+        width: 30%;
+    }
+
+   
+    .cartao-img
+{
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sinal
+{
+    width: 15px;
+    margin-left: -15%;
+}
+.chip
+{
+    width: 20px;
+}
+.bandeira
+{
+    width: 25px;
+    justify-self: right;
+    margin-left: 43%;
+}
+
+    .validade {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mes-expiracao, #ano-expiracao, #cvv {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    
+
+
+    input, select {
+        font-size: 2em;
+        /* ... outras propriedades ... */
+        width: 15vw;
+    flex-direction: column;
+    }
+    .inputBox {
+        width: 100%; /* Para garantir que os inputs ocupem toda a largura */
+    }
+
+    .info {
+        margin-left: 0; /* Ajustei a margem para 0 */
+        text-align: center; /* Centralizei o texto */
+    }
+
+
+    .cartao
+    {   
+         width: 45vw;
+        height: 32vw;
+        padding: 1%;
+    }
+
+    #enviar
+    {
+        text-align: center;
+    }
+
+    
+}

@@ -39,7 +39,7 @@
                    
 
                     <br/>
-                    <div>
+                    <div class="genero">
                         <p>Gênero</p>
                    <input type="radio" id="feminino" name="genero" value="feminino" required>
                    <label for="feminino"> Feminino </label>
@@ -52,7 +52,7 @@
                </div>
                    <br>
 
-                   <label for="data_nascimento"><b>Data de nascimento: </b></label>
+                   <label for="data_nascimento" style="font-size: 13px;">Data de nascimento: </label>
                    <input type="date" name="data_nascimento" id="data_nascimento" required>
 
                  
@@ -66,34 +66,34 @@
                     <div>
                        <select class="estado">
                            <option value="0">UF:</option>
-                           <option value="1">Acre - AC </option>
-                           <option value="2">Alagoas - AL</option>
-                           <option value="3">Amapá - AM</option>
-                           <option value="4">Amazonas - AM</option>
-                           <option value="5">Amazonas - AM</option>
-                           <option value="6">Bahia - BA</option>
-                           <option value="7"> Ceará - CE </option>
-                           <option value="8"> Espírito Santo - ES</option>
-                           <option value="9"> Goiás - GO</option>
-                           <option value="10"> Maranhão MA</option>
-                           <option value="11"> Mato Grosso - MT </option>
-                           <option value="12"> Mato Grosso do Sul - MS</option>
-                           <option value="13"> Minas Gerais - MG</option>
-                           <option value="14"> Pará - PA</option>
-                           <option value="15"> Paraíba - PB</option>
-                           <option value="16"> Paraná - `R</option>
-                           <option value="17"> Pernambuco - PE</option>
-                           <option value="18"> Piauí - PI</option>
-                           <option value="19"> Rio de Janeiro - RJ </option>
-                           <option value="20"> Rio Grande do Norte - RN </option>
-                           <option value="21"> Rio Grande do Sul - RS</option>
-                           <option value="22"> Rondônia - RO</option>
-                           <option value="23"> Roraima - RR</option>
-                           <option value="24"> Santa Catarina - SC</option>
-                           <option value="25"> São Paulo - SP </option>
-                           <option value="26"> Sergipe - SE</option>
-                           <option value="27"> Tocantins - TO</option>
-                           <option value="28"> Distrito Federal - DF </option>
+                           <option value="1"> AC </option>
+                           <option value="2"> AL</option>
+                           <option value="3">AP</option>
+                           <option value="4"> AM</option>
+                           <option value="5"> BA</option>
+                           <option value="6"> Ceará - CE </option>
+                           <option value="7"> DF</option>
+                           <option value="8">  ES</option>
+                           <option value="9"> GO</option>
+                           <option value="10">MA</option>
+                           <option value="11">  MT </option>
+                           <option value="12">  MS</option>
+                           <option value="13">  MG</option>
+                           <option value="14"> PA</option>
+                           <option value="15">  PB</option>
+                           <option value="16"> PR</option>
+                           <option value="17">  PE</option>
+                           <option value="18">  PI</option>
+                           <option value="19">  RJ </option>
+                           <option value="20">  RN </option>
+                           <option value="21">  RS</option>
+                           <option value="22"> RO</option>
+                           <option value="23"> RR</option>
+                           <option value="24">  SC</option>
+                           <option value="25"> SP </option>
+                           <option value="26"> SE</option>
+                           <option value="27">  TO</option>
+                           <option value="28">  DF </option>
 
                        </select>
                     <br>
@@ -110,15 +110,22 @@
                     </div>
                     <br>
                     <div class="cartao" id="cartao">
+                       
+                            <div id="faixa" class="faixa invisivel"></div>    
+                       
                         <div id="cartao-frente" class="cartao-frente visivel">
-                          <img class="chip" src="chip-cartão" alt=""/>
-                          <img class="bandeira" src="bandeira-cartão.png" alt=""/>
-                          <img class="sinal" src="sinal.png" alt="">
+                            <div class="cartao-img">
+                            <img class="chip" src="chip-cartão" alt=""/>
+                            <img class="sinal" src="sinal.png" alt="">
+                            <img class="bandeira" src="bandeira-cartão.png" alt=""/>
+                            </div>
+                        
                             <div class="info-cartao">
                               <input type="text" name="numero" id="numero" maxlength="16" placeholder="Número do cartão">
                               <input type="text" name="nome" id="nome" placeholder="Nome do titular ">
+                            
                                 <div class="validade">
-                                    <label for="expiration-month"> Vencimento: </label>
+                                    <label for="expiration-month"> Val: </label>
                                     <select id="mes-expiracao" name="mes-expiracao">
                                       <option value="01">01</option>
                                       <option value="02">02</option>
@@ -141,7 +148,7 @@
                         <div id="cartao-tras" class="cartao-tras invisivel">
                            
                             <input type="text" name="CVV" id="cvv" placeholder="CVV" maxlength="3" onKeyUp="proximo()" required/>
-                            <div class="faixa"></div>
+                           
                         </div> 
                     </div>
                 </section>
@@ -152,7 +159,7 @@
         <form action="">
             <fieldset >
                 <legend><b>Cadastro do Pet</b> </legend>
-                <br>
+            
                 <section class="cad-pet">
                     <div class="inputBox">
                         <input type="text" name="nome" id="nome-pet" class="inputUser" required>
@@ -196,7 +203,7 @@
                         <div class="historico">
                             <br>
                             <label class= "historico" for="histórico">Histórico do pet - Vacinação, cirurgias e etc:</label>
-                            <textarea name="Histórico" id="historico" cols="50" rows="10"></textarea>
+                            <textarea name="historico" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
                              
                         </div>
                         <input type="submit" name="enviar" id="enviar">

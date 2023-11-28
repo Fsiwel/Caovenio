@@ -5,6 +5,10 @@
  
 }
 
+html
+{
+  width: fit-content;
+}
 body 
 {
   background-color: #FAF7A9;
@@ -28,8 +32,8 @@ header
 .navegar 
 {
   display: flex;
-  justify-content: space-between;
-  
+ flex-flow: nowrap;
+  justify-content: center;
   
 }
 
@@ -40,7 +44,6 @@ header
   height: 100px;
   width: 100px;
   display: flex;
- 
   background-color:#FFFF;
   border: #fff solid;
   border-radius: 50%;
@@ -56,6 +59,7 @@ header
  padding: 1.5rem 6rem;
  
  
+ 
 }
 
 .menu ul 
@@ -63,6 +67,7 @@ header
   display: flex;
   list-style: none;
   align-items: center;
+  
   
 }
 
@@ -86,6 +91,12 @@ header
   font-size: 35px;
 }
 
+.login 
+{
+  align-self: center;
+  display: flex;
+  justify-content: right;
+}
 .acesso 
 {
   border:#000;
@@ -94,7 +105,7 @@ header
   text-decoration: none;
   color: #FFF;
   font-size: 35px;
-  
+  align-self: center;
   
 }
 
@@ -287,15 +298,16 @@ footer p {
   
   /* Card */
   .card {
-    width: 503px;
+    width: 500px;
     height: 580px;
-    margin: 25px;
+    margin: 20px;
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
     transition: 0.3s;
     flex: 0 0 auto; 
+    flex-direction: row;
     transition: height 0.3s ease-in-out;
 
   }
@@ -574,7 +586,164 @@ img .p1 {
   .expanded {
     height: auto;
   }
+  
+  
+
+  @media only screen and (max-width: 768px) {
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        display: inline-flex;    
+        
+    }
+    
+
+    .navegar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo 
+    {
+        margin-left: 1%;
+    }
+    .menu, .acesso {
+        padding: 1rem;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .acesso button {
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .gif
+    {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .carrossel 
+    {
+        align-items: cen;
+        
+    }
+    
+    #planos-btn 
+{
+    margin-left:49%;
+    margin-top: 3%;
+    text-decoration: none;
+    border-style: outset;
+    border-color: #065A96;
+    border-radius: 16%;
+    background-color:#259CF2;
+    font-size: 25px;
+    cursor:pointer;
+    width: 20vh;
+    text-transform: uppercase;
+    margin-bottom: 1%;
+}
+}
+
 
  
+@media only screen and (max-width: 420px) {
+    
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+  }
+  
+  .container {
+      width: 900%;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      display: inline-flex;    
+      
+  }
+  
+
+  .navegar {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .logo 
+  {
+      margin-left: 1%;
+  }
+  .menu, .acesso {
+      padding: 1rem;
+  }
+
+  .menu ul {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .acesso button {
+      width: 100%;
+  }
+
+  img {
+      max-width: 100%;
+      height: auto;
+  }
+
+ .card
+ {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+ }
+
+  .carrossel 
+  {
+      align-items: cen;
+      
+  }
+  
+  #planos-btn 
+{
+  margin-left:49%;
+  margin-top: 3%;
+  text-decoration: none;
+  border-style: outset;
+  border-color: #065A96;
+  border-radius: 16%;
+  background-color:#259CF2;
+  font-size: 25px;
+  cursor:pointer;
+  width: 20vh;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+}
+}
 
  
